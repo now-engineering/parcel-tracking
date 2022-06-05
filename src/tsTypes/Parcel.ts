@@ -8,7 +8,7 @@ export interface Parcel {
   createdAt: string;
   customer_name: string;
   customer_phone: string;
-  deliveryRider: null;
+  deliveryRider: DeliveryRider;
   delivery_charge: number;
   delivery_type: string;
   description: string;
@@ -36,6 +36,12 @@ export interface Brand {
   __typename: string;
   objectId: string;
   name: string;
+}
+
+export interface DeliveryRider {
+  objectId: string;
+  username: string;
+  __typename: string;
 }
 
 export interface CostBreakdown {
