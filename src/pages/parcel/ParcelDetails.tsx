@@ -1,5 +1,4 @@
 import { useQuery } from "@apollo/client";
-import moment from "moment";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { GET_ORDER_BY_ID } from "../../graphql/query/getOrders";
@@ -7,7 +6,7 @@ import { Parcel } from "../../tsTypes/Parcel";
 
 const ParcelDetails = () => {
   const { id } = useParams();
-  const { data, loading, error, refetch } = useQuery(GET_ORDER_BY_ID, {
+  const { data, loading, error } = useQuery(GET_ORDER_BY_ID, {
     variables: {
       orderId: id,
     },
